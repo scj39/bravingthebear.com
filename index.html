@@ -1,18 +1,85 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset = "UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/btbstyles.css"> 
-	<title> Braving the Bear | Explorative scrawlings in an untamed world </title> 
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Contemplative history blog">
+	<meta name="Smit Jain">
+
+	<title>BtB</title>
+
+	<!--font awesome for fonts & icons-->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<!--bootstrap stylesheet-->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
 
 </head>
 
-<body>
+<body ng-app="myWeb">
 
-	<header id = "main-banner"> <img src="images/banner.jpg" alt="Braving the Bear"> </header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
 
-	
-</body> 
+			<!--Brand and button must be grouped together to make things easier-->
+			<div class="navbar-header">
 
-</html> 
+				<div class="navbar-brand">BtB
+				</div>
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavigation" role="turn on/off navigation">
+					<!-- wrapper for icon + label-->
+					<div id="toggler"> 
+						<span>Menu</span>
+						<i class="fa fa-bars"></i>
+					</div>
+				</button>
+
+			</div>
+
+			<!--Main navigation -->
+			<div class="collapse navbar-collapse" id="collapsibleNavigation">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Support Us</a></li>
+				</ul>
+			</div> <!--end main nav-->
+
+		</div><!-- end container-->
+	</nav> <!--end nav-->
+
+
+	<!--Carousel-->
+	<carousel-generator></carousel-generator>
+
+
+	<!--Carousel end-->
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+	<!--my stylesheets-->
+	<link rel="stylesheet" type="text/css" href="page.css">
+
+
+	<!-- External CDN libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<!--my scripts-->
+	<script src="myWeb.module.js"></script>
+	<script src="myWeb.controller.js"></script>
+	<script src="carousel/carousel.module.js"></script>
+	<script src="carousel/carousel-generator.component.js"></script>
+
+
+</body>

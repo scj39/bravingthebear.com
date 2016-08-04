@@ -1,0 +1,236 @@
+/*TODO:
+1. figure out how to make decent box-shadows; see comments
+2. reorganize css by featue, learn less or sass.
+3. For the Lord's sake, place swipe-right on carousel
+*/
+body{
+	font-family: 'Ubuntu', cursive;
+	background-color: #351d1f; 
+}
+
+
+.navbar{
+	max-height: 50px; 
+}
+
+.navbar-collapse.in {
+	overflow:visible;
+}
+
+
+
+/*forces nav to expand right from the nav header. Also makes the background transparently black*/
+.navbar-nav{
+	margin: 0 -15px 0px ; 
+	background-color: rgb(0, 0, 0); /*In case visitors are using really old browsers. */
+	background-color:rgba(0,0,0,0.745);
+}
+
+/*ensures that the nav is clean text w/o background: background on larger devices*/
+@media (min-width: 768px){
+	.navbar-nav{
+		background-color: transparent;
+		opacity: 1; 
+	}
+} 
+
+.navbar.navbar-default {
+	background: white;
+	border-color: transparent;
+
+	/*still not sure about these box-shadows */
+	box-shadow: 0px 3.5px 25px black;
+}
+
+.navbar-default .navbar-brand{
+	display: none; 
+	/*color: black; 
+	text-transform: uppercase;
+	font-size: 18px;*/
+}
+
+.navbar-default .navbar-brand:hover{
+	/*
+	font-style: italic; 
+	color: black; */
+
+}
+
+
+
+/*mobile first, for dropdown in smaller screens*/
+.navbar-default .navbar-nav>li>a{
+	text-align: center;
+	border-bottom: 1px solid #ce0d0d;
+	box-shadow: inset 1px 1px 5px black;
+	font-size: 1.30em; 
+	line-height: normal;  
+	text-transform: uppercase;
+	color: white; 
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+	background-color: rgba(0,0,0,0.85);  
+	color: white; 
+
+}
+
+.navbar-default .navbar-nav>li>a{
+
+}
+
+@media (min-width: 495px){
+	body .carousel-inner>.item .tinted-image{
+		height: 300px; 	
+	}
+	body .overlay{
+		height: 300px; 
+	}
+
+
+	body .carousel-caption{
+		font-size: 1.2em; 
+	}
+}
+
+/*for larger screens, spread across the nav*/
+@media (min-width: 768px){
+
+	.navbar-default .navbar-nav>li>a{
+		box-shadow: none; 
+		text-shadow: none; 
+		color:black; 
+		border:none; 
+	}
+
+	/*color transparent stops awkward issues with placement when it expands*/
+	.navbar-default .navbar-nav>li>a:hover{
+		background-color: transparent;  
+		color: black; 
+		padding-bottom: 10px; 
+		border-bottom: 5px ridge #ce0d0d; 
+	}
+
+	body .carousel-inner>.item .tinted-image{
+		height: 390px; 	
+	}
+	body .overlay{
+		height: 390px; 
+	}
+	body .carousel-caption{
+		font-size: 1.4em; 
+	}
+
+	#imgCarousel{
+		border: 1px solid black;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+
+}
+
+@media (min-width: 915px){
+	body .carousel-inner>.item .tinted-image{
+		height: 605px; 	
+	}
+	body .overlay{
+		height: 605px; 
+	}
+
+	body .carousel-caption{
+
+	}
+
+	#imgCarousel{
+		border: 1px solid black;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+
+}
+
+
+
+
+.navbar-default .navbar-toggle{
+	color: black; 
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 0px; 
+
+}
+
+
+.navbar-default .navbar-toggle #toggler span{
+	display: inline-block;
+}
+
+.carousel{
+	margin-top: 50px;
+
+	/* I don't quite like this effect; is it possible to widen the shadow to the left? TODO*/
+	box-shadow: .4px 5px 5px 1px black;
+}
+
+.carousel-caption{
+	/*experimental*/
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+}
+
+
+.carousel-caption h1{
+	font-size: 3em;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.95);
+}
+
+.carousel-caption h1::first-letter{
+	font-size: 1.35em;
+	font-weight: normal;
+	font-family: 'Lobster', cursive;
+	color: #ce0d0d;
+	background-color: black;
+	border-radius: 50px;
+}
+
+/*ensures that wrapping div expands across the page*/
+.carousel-inner>.item .tinted-image{
+	position: relative; 
+	height: 295px;
+	width: 100%;
+}
+
+
+/*makes sure that image inside wrapper behaves correctly; inherits behavior from above*/
+.carousel-inner>.item img{
+	height: inherit;
+	width: inherit;
+
+}
+
+.carousel-inner .item h1 a{
+	color: white; 
+	text-decoration: none; 
+}
+
+.carousel-inner .item h1 a:hover{
+	color: white; 
+	text-decoration: underline;
+}
+
+/* makes image text legible*/
+.overlay{
+	position: absolute;
+	z-index: 1; /*greater than that of image (0?), less than that of caption (10)*/ 
+	bottom: 0px; 
+	height: 295px; 
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.56)); 
+
+}
+

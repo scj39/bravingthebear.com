@@ -1,0 +1,62 @@
+<!-- Carousel code. For now, the slides are specified. But in the interests of DRY, I aim to replace the duplication of code inherent to his with an ng-repeat-->
+
+<div id="imgCarousel" class="carousel slide" data-ride="carousel">
+
+	<!--carousel's indicators-->
+	<ol class="carousel-indicators">
+		<li data-target="#imgCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#imgCarousel" data-slide-to="1"></li>
+		<li data-target="#imgCarousel" data-slide-to="2"></li>
+	</ol>
+
+	<div class="carousel-inner">
+
+		<!--current slide-->
+		<div class="item active">
+			<div class="tinted-image">
+				<img src="img/hannibal.jpg">
+				<div class="overlay"></div>
+			</div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1><a href="https://www.google.com">Coming soon!</a></h1>
+					<p> Shedding light on the forgotten human stories of our history</p>
+				</div>
+			</div>
+		</div>
+
+		<!--middle slide-->
+		<div class="item">
+			<div class="tinted-image">
+				<img src="img/hannibal2.jpg">
+				<div class="overlay"></div>
+			</div>
+			<div class="container">
+				<!--Caption needs to get a duller white when dropped, or menu will be harder to read -->
+				<div class="carousel-caption">
+					<h1><a href="#">Example headline</a></h1>
+					<p>Example subtitles</p>
+				</div>
+			</div>
+		</div>
+
+		<!--last  slide-->
+
+		<div class="item">
+			<div class="tinted-image">
+				<img src="img/hannibal3.jpg">
+				<div class="overlay"></div>
+			</div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1><a href="#">Example headline</a></h1>
+					<p>Example subtitles</p>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+
+</div>

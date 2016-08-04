@@ -1,0 +1,5 @@
+techniques in css:
+
+1.Specify font-size using large, small, etc in the body and then change to resize across
+2. Use background color and border-radius for some cool text-pops-out effects. 
+3. Use box-shadow to enable text on images w/o the need for a gradient overlay. 
